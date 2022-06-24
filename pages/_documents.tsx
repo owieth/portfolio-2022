@@ -14,7 +14,17 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>{CssBaseline.flush()}</Head>
+        <Head>
+          {CssBaseline.flush()}
+          
+          <link
+            rel="preload"
+            href="/fonts/EXCRATCH-Bold.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          </Head>
         <body>
           <Main />
           <NextScript />

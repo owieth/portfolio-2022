@@ -1,4 +1,4 @@
-import { Switch, useTheme } from "@nextui-org/react";
+import { Container, Switch, useTheme } from "@nextui-org/react";
 import { useTheme as useNextTheme } from 'next-themes';
 import Link from "next/link";
 import styled from 'styled-components';
@@ -17,7 +17,8 @@ const Button = ({ className, label }: { className: string, label: string }) => {
     <div className="corners">
       <div className="top right"></div>
       <div className="bottom left"></div>
-      <Link href={""} style={{ color: "white" }}>{label}</Link>
+      { label }
+      {/* <Link href={""} style={{ color: "white" }}>{label}</Link> */}
     </div>
     </div>
   )
