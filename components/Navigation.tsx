@@ -1,30 +1,56 @@
-import { Container, Switch, useTheme } from "@nextui-org/react";
+import { Link, Switch, useTheme } from "@nextui-org/react";
 import { useTheme as useNextTheme } from 'next-themes';
-import Link from "next/link";
 import styled from 'styled-components';
 import { MoonIcon } from '../components/icons/MoonIcon';
 import { SunIcon } from '../components/icons/SunIcon';
 
 const StyledNavigation = styled.div`
     display: flex;
+    align-items: center;
     flex-direction: row;
-    gap: 25%;
+    gap: 50px;
+    cursor: pointer;
 `;
 
 const Button = ({ className, label }: { className: string, label: string }) => {
+  const { type } = useTheme();
+
   return (
     <div className={className}>
     <div className="corners">
       <div className="top right"></div>
       <div className="bottom left"></div>
-      { label }
-      {/* <Link href={""} style={{ color: "white" }}>{label}</Link> */}
+      <Link href={""} style={{ color: type == 'dark' ? 'white' : 'black' }}>{label}</Link>
     </div>
     </div>
   )
 }
 
 const StyledButton = styled(Button)`
+  font-size: 24px;
+
+  &:hover, &:active {
+    .top {
+      top: 0;
+      border-top: 1px solid;
+    }
+
+    .bottom {
+      bottom: 0;
+      border-bottom: 1px solid;
+    }
+
+    .left {
+      left: 0;
+      border-left: 1px solid;
+    }
+
+    .right {
+      right: 0;
+      border-right: 1px solid;
+    }
+  }
+
   .corners {
     position: relative;
     padding: 10px;
@@ -32,29 +58,9 @@ const StyledButton = styled(Button)`
 
   .top, .bottom {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     pointer-events: none;
-  }
-
-  .top {
-    top: 0;
-    border-top: 1px solid;
-  }
-
-  .bottom {
-    bottom: 0;
-    border-bottom: 1px solid;
-  }
-
-  .left {
-    left: 0;
-    border-left: 1px solid;
-  }
-
-  .right {
-    right: 0;
-    border-right: 1px solid;
   }
 `;
 

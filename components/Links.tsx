@@ -1,29 +1,33 @@
-import { Image } from "@nextui-org/react";
 import styled from 'styled-components';
+import { Behance } from './icons/Behance';
+import { Dribbble } from './icons/Dribbble';
 import { Github } from "./icons/Github";
-
-
-const Line = styled.div`
-    width: 2px;
-    height: 200px;
-    background-color: white;
-`;
+import { Line } from './icons/Line';
 
 const Socials = () => {
-    return (
-        <>
-            <Github />
-        </>
-    )
+  return (
+    <>
+      <Github />
+      <Dribbble />
+      <Behance />
+    </>
+  )
 }
 
-export const Links = () => {
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+`;
 
+export const Links = () => {
   return (
-    <div style={{ width: '100px'}}>
-        <Line></Line>
-        <Socials />
-        <Line></Line>
-    </div>
+    <Container>
+      <Line />
+      <Socials />
+      <Line />
+    </Container>
   )
 }
