@@ -16,7 +16,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {CssBaseline.flush()}
-          
+
           <link
             rel="preload"
             href="/fonts/EXCRATCH-Bold.woff2"
@@ -24,7 +24,23 @@ class MyDocument extends Document {
             type="font/woff2"
             crossOrigin="anonymous"
           />
-          </Head>
+
+          <link
+            rel="preload"
+            href="/fonts/EXCRATCH-Regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+
+          <link
+            rel="preload"
+            href="/fonts/EXCRATCH-Thin.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />

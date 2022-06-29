@@ -3,6 +3,7 @@ import { useTheme as useNextTheme } from 'next-themes';
 import styled from 'styled-components';
 import { MoonIcon } from '../components/icons/MoonIcon';
 import { SunIcon } from '../components/icons/SunIcon';
+import confetti from 'canvas-confetti';
 
 const StyledNavigation = styled.div`
     display: flex;
@@ -68,6 +69,11 @@ export const Navigation = () => {
   const { setTheme } = useNextTheme();
   const { isDark } = useTheme();
 
+  const handleChange = (e: any) => {
+    setTheme(e.target.checked ? 'dark' : 'light')
+    confetti({});
+  }
+
   return (
     <StyledNavigation>
       <StyledButton label='Home' className="" />
@@ -78,7 +84,8 @@ export const Navigation = () => {
         checked={isDark}
         size="xl"
         shadow
-        onChange={(e) => setTheme(e.target.checked ? 'dark' : 'light')}
+        color="warning"
+        onChange={(e) => handleChange(e)}
         iconOn={<SunIcon />}
         iconOff={<MoonIcon />}
       />
