@@ -1,7 +1,12 @@
-import { createTheme, NextUIProvider } from '@nextui-org/react'
+import { Container, createTheme, NextUIProvider } from '@nextui-org/react'
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import type { AppProps } from 'next/app'
+import { useEffect, useRef, useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
+import { Logo } from '../components/Logo';
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
+import { useRouter } from 'next/router';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 const lightTheme = createTheme({
   type: 'light',
@@ -53,6 +58,14 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App({ Component, pageProps }: AppProps) {
+  const [loading, setLoading] = useState(true);
+  const containerRef = useRef(null)
+  const { asPath } = useRouter();
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 1500);
+  })
+
   return (
     <NextThemesProvider
       defaultTheme="system"
@@ -62,11 +75,36 @@ function App({ Component, pageProps }: AppProps) {
         dark: darkTheme.className
       }}
     >
-    <NextUIProvider>
-      <GlobalStyle />
-      <Component {...pageProps} />
-    </NextUIProvider>
-  </NextThemesProvider>
+      <NextUIProvider>
+        <GlobalStyle />
+        {!loading ? (
+          <LocomotiveScrollProvider
+            options={{
+              smooth: true,
+              // ... all available Locomotive Scroll instance options
+            }}
+            watch={
+              [
+                //..all the dependencies you want to watch to update the scroll.
+                //  Basicaly, you would want to watch page/location changes
+                //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
+              ]
+            }
+            location={asPath}
+            //onLocationChange={(scroll: any) => scroll.scrollTo(0, { duration: 0, disableLerp: true })}
+            containerRef={containerRef}
+          >
+            <div data-scroll-container ref={containerRef}>
+              <Component {...pageProps} />;
+            </div>
+          </LocomotiveScrollProvider>
+        ) : (
+          <Container style={{ height: '100vh' }} display="flex" justify="center" alignItems="center">
+            <Logo width={700} height={700} />
+          </Container>
+        )}
+      </NextUIProvider>
+    </NextThemesProvider>
   )
 }
 

@@ -20,6 +20,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
+  margin-left: 17.5px;
 `;
 
 export const Links = () => {
