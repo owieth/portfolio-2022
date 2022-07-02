@@ -6,6 +6,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { StyledCard } from '../components/Card';
 import { Content } from '../components/Content';
 import { Links } from '../components/Links';
 import { Logo } from '../components/Logo';
@@ -72,13 +73,41 @@ const Home: NextPage = () => {
       <h1>Work</h1>
       <h2>Stuff I've built</h2>
 
+      <Grid.Container gap={2} justify="center">
+        <Grid xs={12} sm={4}>
+          <Atropos style={{ height: '340px', width: '100%' }}>
+            <StyledCard heading={"f"} description={""} image={"/assets/images/jureko1.jpg"} />
+          </Atropos>
+        </Grid>
+        <Grid xs={12} sm={4}>
+          <Atropos style={{ height: '340px', width: '100%' }}>
+            <StyledCard heading={"f"} description={""} image={"/assets/images/jureko2.jpg"} />
+          </Atropos>
+
+        </Grid>
+        <Grid xs={12} sm={4}>
+          <Atropos style={{ height: '340px', width: '100%' }}>
+            <StyledCard heading={"f"} description={""} image={"/assets/images/jureko3.jpg"} />
+          </Atropos>
+
+        </Grid>
+        <Grid xs={12} sm={5}>
+          <Atropos style={{ height: '400px', width: '100%' }}>
+            <StyledCard heading={"JT 2022 Admin"} description={"Admindashboard JT 2022 App"} image={"/assets/images/admin.jpg"} />
+          </Atropos>
+
+        </Grid>
+        <Grid xs={12} sm={7}>
+          <Atropos style={{ height: '400px', width: '100%' }}>
+            <StyledCard heading={"JT 2022 App"} description={"Tailormade App for JT 2022"} image={"/assets/images/app.jpg"} />
+          </Atropos>
+
+        </Grid>
+      </Grid.Container>
+
       <Spacer y={10} />
       <h1>Portfolio</h1>
       <h2>Stuff I've shoot</h2>
-
-      <script async src="https://lens.xyz/widgets.js"></script>
-      <link rel="stylesheet" href="https://lens.xyz/widget-styles.css" />
-
 
       <Swiper
         style={{
@@ -89,12 +118,9 @@ const Home: NextPage = () => {
         slidesPerView={3}
         grabCursor={true}
         loop={true}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
       >
-
-        {Images.map((image) => {
-          return <SwiperSlide>
+        {Images.map((image, index) => {
+          return <SwiperSlide key={index}>
             <Atropos>
               <StyledImage src={image} data-atropos-offset="-5" alt={''} height={500} width={400} objectFit={'cover'} />
             </Atropos>
