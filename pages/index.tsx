@@ -76,18 +76,18 @@ const Home: NextPage = () => {
       <Grid.Container gap={2} justify="center">
         <Grid xs={12} sm={4}>
           <Atropos style={{ height: '340px', width: '100%' }}>
-            <StyledCard heading={"f"} description={""} image={"/assets/images/jureko1.jpg"} />
+            <StyledCard heading={"Flag"} description={"Flag for JuReKo 2022"} image={"/assets/images/jureko1.jpg"} />
           </Atropos>
         </Grid>
         <Grid xs={12} sm={4}>
           <Atropos style={{ height: '340px', width: '100%' }}>
-            <StyledCard heading={"f"} description={""} image={"/assets/images/jureko2.jpg"} />
+            <StyledCard heading={"Flyer"} description={"Flyer for JuReKo 2022"} image={"/assets/images/jureko2.jpg"} />
           </Atropos>
 
         </Grid>
         <Grid xs={12} sm={4}>
           <Atropos style={{ height: '340px', width: '100%' }}>
-            <StyledCard heading={"f"} description={""} image={"/assets/images/jureko3.jpg"} />
+            <StyledCard heading={"SaveTheDate"} description={"SaveTheDate Flyer for JuReKo 2022"} image={"/assets/images/jureko3.jpg"} />
           </Atropos>
 
         </Grid>
