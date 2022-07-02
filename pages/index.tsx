@@ -71,7 +71,7 @@ const Home: NextPage = () => {
 
       <Spacer y={10} />
       <h1>Work</h1>
-      <h2>Stuff I've built</h2>
+      <h2>Stuff I`ve built</h2>
 
       <Grid.Container gap={2} justify="center">
         <Grid xs={12} sm={4}>
@@ -107,7 +107,7 @@ const Home: NextPage = () => {
 
       <Spacer y={10} />
       <h1>Portfolio</h1>
-      <h2>Stuff I've shoot</h2>
+      <h2>Stuff I`ve shoot</h2>
 
       <Swiper
         style={{
