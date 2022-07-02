@@ -12,7 +12,6 @@ export const Content = () => {
 
     return (
         <>
-            <Spacer x={5} />
             <Position>
                 <h1>Hi, I`m Oli</h1>
                 <h2>I design, create & build Stuff</h2>
