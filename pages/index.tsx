@@ -8,6 +8,7 @@ import { Content } from '../components/Content';
 import { Links } from '../components/Links';
 import { Logo } from '../components/Logo';
 import { Navigation } from '../components/Navigation';
+import { Images } from '../constants/images';
 
 const StyledGrid = styled.div`
   display: grid;
@@ -68,8 +69,8 @@ const Home: NextPage = () => {
       <h1>Portfolio</h1>
 
       <motion.div style={{ height: '100%'}}>
-        {[1, 2, 3, 4, 5, 6].map((image) => {
-            return <Image src={`/assets/images/${image}.jpg`} key={image} alt={''} height={500} width={400} objectFit={'cover'}/>
+        {Images.map((image) => {
+            return <Image src={image} key={image} alt={''} height={500} width={400} objectFit={'cover'}/>
         })}
       </motion.div>
     </Container>
