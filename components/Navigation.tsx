@@ -18,11 +18,11 @@ const Button = ({ className, label }: { className: string, label: string }) => {
 
   return (
     <div className={className}>
-    <div className="corners">
-      <div className="top right"></div>
-      <div className="bottom left"></div>
-      <Link href={""} style={{ color: type == 'dark' ? 'white' : 'black' }}>{label}</Link>
-    </div>
+      <div className="corners">
+        <div className="top right"></div>
+        <div className="bottom left"></div>
+        <Link href={""} style={{ color: type == 'dark' ? 'white' : 'black' }}>{label}</Link>
+      </div>
     </div>
   )
 }
