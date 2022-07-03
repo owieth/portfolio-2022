@@ -107,7 +107,7 @@ const Home: NextPage = () => {
 
       <Spacer y={10} />
       <h1>Portfolio</h1>
-      <h2>Stuff I`ve shoot</h2>
+      <h2>Stuff I`ve shot</h2>
 
       <Swiper
         style={{
