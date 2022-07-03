@@ -72,6 +72,7 @@ const Home: NextPage = () => {
       <Spacer y={10} />
       <h1>Work</h1>
       <h2>Stuff I`ve built</h2>
+      <h3>More Stuff can be seen on my Github Profile!</h3>
 
       <Grid.Container gap={2} justify="center">
         <Grid xs={12} sm={4}>

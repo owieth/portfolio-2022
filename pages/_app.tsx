@@ -52,6 +52,12 @@ const GlobalStyle = createGlobalStyle`
       letter-spacing: 1px;
     }
 
+    h3 {
+      font-family: 'EXCRATCH-Thin';
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
     a {
       font-family: 'EXCRATCH-Thin';
     }
