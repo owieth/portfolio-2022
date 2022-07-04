@@ -57,7 +57,7 @@ const StyledImage = styled(Image)`
 const Home: NextPage = () => {
   return (
     <Container gap={5} data-scroll-section data-scroll-speed="6">
-      <Grid.Container gap={2} justify="space-between" alignItems="center" css={{ height: 'max-content' }}>
+      <Grid.Container id="home" gap={2} justify="space-between" alignItems="center" css={{ height: 'max-content' }}>
         <Grid>
           <Logo width={100} height={100} />
         </Grid>
@@ -70,9 +70,9 @@ const Home: NextPage = () => {
       </StyledGrid>
 
       <Spacer y={10} />
-      <h1>Work</h1>
+      <h1 id="work">Work</h1>
       <h2>Stuff I`ve built</h2>
-      <h3>More Stuff can be seen on my Github Profile!</h3>
+      <h3>More Stuff can be found on my Github Profile!</h3>
 
       <Grid.Container gap={2} justify="center">
         <Grid xs={12} sm={4}>
@@ -107,7 +107,7 @@ const Home: NextPage = () => {
       </Grid.Container>
 
       <Spacer y={10} />
-      <h1>Portfolio</h1>
+      <h1 id="portfolio">Portfolio</h1>
       <h2>Stuff I`ve shot</h2>
 
       <Swiper

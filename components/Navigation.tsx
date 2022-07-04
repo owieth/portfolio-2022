@@ -21,7 +21,7 @@ const Button = ({ className, label }: { className: string, label: string }) => {
       <div className="corners">
         <div className="top right"></div>
         <div className="bottom left"></div>
-        <Link href={""} style={{ color: type == 'dark' ? 'white' : 'black' }}>{label}</Link>
+        <Link href={'#' + label.toLocaleLowerCase()} style={{ color: type == 'dark' ? 'white' : 'black' }}>{label}</Link>
       </div>
     </div>
   )
