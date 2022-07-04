@@ -94,7 +94,7 @@ const Socials = () => {
 
   return (
     <StyledButton isDark={isDark!}>
-      <a className="cta" href="https://owieth.bio.link/" target="_blank">
+      <a className="cta" href="https://owieth.bio.link/" target="_blank" rel="noreferrer">
         <span>👋</span>
         <span>
           <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg">
