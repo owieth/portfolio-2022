@@ -75,11 +75,13 @@ const Home: NextPage = () => {
       <h3>More Stuff can be found on my Github Profile!</h3>
 
       <Grid.Container gap={2} justify="center">
-        <!--<Grid xs={12} sm={4}>
-          <Atropos style={{ height: '340px', width: '100%' }}>
-            <StyledCard heading={"Flag"} description={"Flag for JuReKo 2022"} image={"/assets/images/jureko1.jpg"} />
-          </Atropos>
-        </Grid>-->
+        {/* 
+          <Grid xs={12} sm={4}>
+            <Atropos style={{ height: '340px', width: '100%' }}>
+              <StyledCard heading={"Flag"} description={"Flag for JuReKo 2022"} image={"/assets/images/jureko1.jpg"} />
+            </Atropos>
+          </Grid>
+        */}  
         <Grid xs={12} sm={6}>
           <Atropos style={{ height: '340px', width: '100%' }}>
             <StyledCard heading={"Flyer"} description={"Flyer for JuReKo 2022"} image={"/assets/images/jureko2.jpg"} />
